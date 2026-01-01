@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 01 - Programme Licence</title>
+  <link rel="stylesheet" href="home.css">
+  <style>
+    .accordion, .kw-accordion {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      cursor: pointer;
+      padding: 20px;
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      text-align: left;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .panel, .kw-panel {
+      padding: 0 18px;
+      background-color: transparent;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out; /* Animation plus fluide */
+    }
+
+    .vocab-grid, .kw-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px 0;
+    }
+
+    .vocab-card, .kw-card {
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 3px solid #7c3aed;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+
+    .term-en, .kw-en { color: #94a3b8; font-size: 0.8em; display: block; margin-bottom: 5px; }
+    .term-fr, .kw-fr { color: #fff; font-size: 0.95em; font-weight: 500; }
+
+    .kw-fr-box {
+      background: rgba(59, 130, 246, 0.1);
+      padding: 8px 12px;
+      border-radius: 6px;
+      border-left: 3px solid #3b82f6;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+    .kw-fr-box:hover { background: rgba(59, 130, 246, 0.2); }
+    
+    .module-btn {
+      display: inline-block;
+      margin: 40px 0;
+      padding: 12px 25px;
+      background: #3b82f6;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-left">
+    <img src="assets/logo.jpeg" alt="Logo" class="logo" style="height:40px;">
+    <h2 style="color:white; margin-left:15px; display:inline-block; vertical-align:middle;">Module 01 : Programme Complet</h2>
+  </div>
+</nav>
+
+<main class="block" style="padding: 20px;">
+  <header class="hero" style="padding: 30px 0; text-align: center; color: white;">
+    <h1>Parcours de la Licence</h1>
+    <p>Cliquez sur chaque année pour découvrir les matières.</p>
+  </header>
+
+  <button class="accordion">Première Année (L1) <span>+</span></button>
+  <div class="panel">
+    <div class="vocab-grid">
+      <div class="vocab-card">
+        <span class="term-en">Ergonomics and Accessibility</span>
+        <div class="kw-fr-box" onclick="speakText('Ergonomie et Accessibilité')"><span class="term-fr">Ergonomie et Accessibilité 🔊</span></div>
+      </div>
+      <div class="vocab-card">
+        <span class="term-en">Digital Culture</span>
+        <div class="kw-fr-box" onclick="speakText('Culture Numérique')"><span class="term-fr">Culture Numérique 🔊</span></div>
+      </div>
+      <div class="vocab-card">
+        <span class="term-en">Marketing and Communications Strategies</span>
+        <div class="kw-fr-box" onclick="speakText('Stratégies de Marketing et de Communication')"><span class="term-fr">Stratégies de Marketing 🔊</span></div>
+      </div>
+      <div class="vocab-card">
+        <span class="term-en">Expression, Communication and Rhetoric</span>
+        <div class="kw-fr-box" onclick="speakText('Expression, Communication et Rhétorique')"><span class="term-fr">Expression et Rhétorique 🔊</span></div>
+      </div>
+      <div class="vocab-card">
+        <span class="term-en">Multimedia Writing and Storytelling</span>
+        <div class="kw-fr-box" onclick="speakText('Écriture Multimédia et Storytelling')"><span class="term-fr">Écriture Multimédia 🔊</span></div>
+      </div>
+      <div class="vocab-card">
+        <span class="term-en">Graphic Production</span>
+        <div class="kw-fr-box" onclick="speakText('Production Graphique')"><span class="term-fr">Production Graphique 🔊</span></div>
+      </div>
+      <div class="vocab-card">
+        <span class="term-en">Artistic Culture</span>
+        <div class="kw-fr-box" onclick="speakText('Culture Artistique')"><span class="term-fr">Culture Artistique 🔊</span></div>
+      </div>
+      <div class="vocab-card">
+        <span class="term-en">Audio and Video Production</span>
+        <div class="kw-fr-box" onclick="speakText('Production Audio et Vidéo')"><span class="term-fr">Production Audio et Vidéo 🔊</span></div>
+      </div>
+      <div class="vocab-card">
+        <span class="term-en">Web Development</span>
+        <div class="kw-fr-box" onclick="speakText('Développement Web')"><span class="term-fr">Développement Web 🔊</span></div>
+      </div>
+      <div class="vocab-card">
+        <span class="term-en">Project Management</span>
+        <div class="kw-fr-box" onclick="speakText('Gestion de Projet')"><span class="term-fr">Gestion de Projet 🔊</span></div>
+      </div>
+      <div class="vocab-card">
+        <span class="term-en">Economics, Management and Digital Law</span>
+        <div class="kw-fr-box" onclick="speakText('Économie, Gestion et Droit du Numérique')"><span class="term-fr">Économie et Droit Digital 🔊</span></div>
+      </div>
+    </div>
+  </div>
+
+  <button class="accordion">Deuxième Année (L2) <span>+</span></button>
+  <div class="panel">
+    <div class="vocab-grid">
+      <div class="vocab-card"><span class="term-en">Experience design</span><div class="kw-fr-box" onclick="speakText('Design d\'Expérience')"><span class="term-fr">Design d'Expérience 🔊</span></div></div>
+      <div class="vocab-card"><span class="term-en">Referencing</span><div class="kw-fr-box" onclick="speakText('Référencement')"><span class="term-fr">Référencement 🔊</span></div></div>
+      <div class="vocab-card"><span class="term-en">Creation and interactive design (UI)</span><div class="kw-fr-box" onclick="speakText('Création et Design Interactif')"><span class="term-fr">Création et UI Design 🔊</span></div></div>
+      <div class="vocab-card"><span class="term-en">Audiovisual and Motion Design</span><div class="kw-fr-box" onclick="speakText('Audiovisuel et Motion Design')"><span class="term-fr">Audiovisuel et Motion 🔊</span></div></div>
+      <div class="vocab-card"><span class="term-en">Front-End Development and integration</span><div class="kw-fr-box" onclick="speakText('Développement Front-End et Intégration')"><span class="term-fr">Développement Front-End 🔊</span></div></div>
+      <div class="vocab-card"><span class="term-en">Development Back</span><div class="kw-fr-box" onclick="speakText('Développement Back-End')"><span class="term-fr">Développement Back-End 🔊</span></div></div>
+      <div class="vocab-card"><span class="term-en">Service deployment</span><div class="kw-fr-box" onclick="speakText('Déploiement de Services')"><span class="term-fr">Déploiement de Services 🔊</span></div></div>
+      <div class="vocab-card"><span class="term-en">Information Systems</span><div class="kw-fr-box" onclick="speakText('Systèmes d\'Information')"><span class="term-fr">Systèmes d'Information 🔊</span></div></div>
+      <div class="vocab-card"><span class="term-en">Designing Data Visualization</span><div class="kw-fr-box" onclick="speakText('Design de Visualisation de Données')"><span class="term-fr">Data Visualisation 🔊</span></div></div>
+    </div>
+  </div>
+
+  <button class="accordion">Troisième Année (L3) <span>+</span></button>
+  <div class="panel">
+    <div class="vocab-grid">
+      <div class="vocab-card"><span class="term-en">Management and Quality Assurance</span><div class="kw-fr-box" onclick="speakText('Management et Assurance Qualité')"><span class="term-fr">Management et Qualité 🔊</span></div></div>
+      <div class="vocab-card"><span class="term-en">Entrepreneurship</span><div class="kw-fr-box" onclick="speakText('Entrepreneuriat')"><span class="term-fr">Entrepreneuriat 🔊</span></div></div>
+      <div class="vocab-card"><span class="term-en">Advanced front-end development</span><div class="kw-fr-box" onclick="speakText('Développement Front-End Avancé')"><span class="term-fr">Front-End Avancé 🔊</span></div></div>
+      <div class="vocab-card"><span class="term-en">Advanced back development</span><div class="kw-fr-box" onclick="speakText('Développement Back-End Avancé')"><span class="term-fr">Back-End Avancé 🔊</span></div></div>
+      <div class="vocab-card"><span class="term-en">Hosting and cybersecurity</span><div class="kw-fr-box" onclick="speakText('Hébergement et Cybersécurité')"><span class="term-fr">Cybersécurité 🔊</span></div></div>
+      <div class="vocab-card"><span class="term-en">Portfolio approach</span><div class="kw-fr-box" onclick="speakText('Démarche Portfolio')"><span class="term-fr">Démarche Portfolio 🔊</span></div></div>
+    </div>
+  </div>
+
+  <div class="keywords-section">
+    <h2 style="color: #fff; margin: 40px 0 20px;">🚀 Essential Marketing Lexicon</h2>
+
+    <button class="kw-accordion">1. Strategy & Visibility (SEO/SEA) <span>+</span></button>
+    <div class="kw-panel">
+      <div class="kw-grid">
+        <div class="kw-card"><span class="kw-en">Search Engine Optimization (SEO)</span><div class="kw-fr-box" onclick="speakText('Le référencement naturel')"><span class="kw-fr">Le référencement naturel 🔊</span></div></div>
+        <div class="kw-card"><span class="kw-en">Keywords</span><div class="kw-fr-box" onclick="speakText('Les mots clés')"><span class="kw-fr">Les mots-clés 🔊</span></div></div>
+        <div class="kw-card"><span class="kw-en">Backlinks</span><div class="kw-fr-box" onclick="speakText('Les liens entrants')"><span class="kw-fr">Les liens entrants / retours 🔊</span></div></div>
+      </div>
+    </div>
+
+    <button class="kw-accordion">2. Acquisition & Performance <span>+</span></button>
+    <div class="kw-panel">
+      <div class="kw-grid">
+        <div class="kw-card"><span class="kw-en">Conversion Rate</span><div class="kw-fr-box" onclick="speakText('Le taux de conversion')"><span class="kw-fr">Le taux de conversion 🔊</span></div></div>
+        <div class="kw-card"><span class="kw-en">Target Audience</span><div class="kw-fr-box" onclick="speakText('Le cœur de cible')"><span class="kw-fr">Le cœur de cible 🔊</span></div></div>
+        <div class="kw-card"><span class="kw-en">Customer Journey</span><div class="kw-fr-box" onclick="speakText('Le parcours client')"><span class="kw-fr">Le parcours client 🔊</span></div></div>
+      </div>
+    </div>
+
+    <button class="kw-accordion">3. Content, Data & UX <span>+</span></button>
+    <div class="kw-panel">
+      <div class="kw-grid">
+        <div class="kw-card"><span class="kw-en">Copywriting</span><div class="kw-fr-box" onclick="speakText('La conception rédaction')"><span class="kw-fr">La conception-rédaction 🔊</span></div></div>
+        <div class="kw-card"><span class="kw-en">User Experience (UX)</span><div class="kw-fr-box" onclick="speakText('L\'expérience utilisateur')"><span class="kw-fr">L'expérience utilisateur 🔊</span></div></div>
+        <div class="kw-card"><span class="kw-en">Bounce Rate</span><div class="kw-fr-box" onclick="speakText('Le taux de rebond')"><span class="kw-fr">Le taux de rebond 🔊</span></div></div>
+      </div>
+    </div>
+
+    <button class="kw-accordion">4. Business & Management <span>+</span></button>
+    <div class="kw-panel">
+      <div class="kw-grid">
+        <div class="kw-card"><span class="kw-en">Entrepreneurship</span><div class="kw-fr-box" onclick="speakText('L\'entrepreneuriat')"><span class="kw-fr">L'entrepreneuriat 🔊</span></div></div>
+        <div class="kw-card"><span class="kw-en">Project Management</span><div class="kw-fr-box" onclick="speakText('La gestion de projet')"><span class="kw-fr">La gestion de projet 🔊</span></div></div>
+        <div class="kw-card"><span class="kw-en">Stakeholders</span><div class="kw-fr-box" onclick="speakText('Les parties prenantes')"><span class="kw-fr">Les parties prenantes 🔊</span></div></div>
+      </div>
+    </div>
+
+    <button class="kw-accordion">5. 🎓 Student Life & Academic Success <span>+</span></button>
+    <div class="kw-panel">
+      <div class="kw-grid">
+        <div class="kw-card"><span class="kw-en">Final Exam / Partials</span><div class="kw-fr-box" onclick="speakText('Les partiels')"><span class="kw-fr">Les partiels / L'examen terminal 🔊</span></div></div>
+        <div class="kw-card"><span class="kw-en">Work-study program</span><div class="kw-fr-box" onclick="speakText('L\'alternance')"><span class="kw-fr">L'alternance 🔊</span></div></div>
+        <div class="kw-card"><span class="kw-en">Oral Presentation / Jury</span><div class="kw-fr-box" onclick="speakText('La soutenance')"><span class="kw-fr">La soutenance 🔊</span></div></div>
+        <div class="kw-card"><span class="kw-en">Internship</span><div class="kw-fr-box" onclick="speakText('Un stage')"><span class="kw-fr">Un stage 🔊</span></div></div>
+        <div class="kw-card"><span class="kw-en">University Library</span><div class="kw-fr-box" onclick="speakText('La bibliothèque universitaire')"><span class="kw-fr">La BU (Bibliothèque Universitaire) 🔊</span></div></div>
+        <div class="kw-card"><span class="kw-en">Student Grant</span><div class="kw-fr-box" onclick="speakText('Une bourse d\'études')"><span class="kw-fr">Une bourse d'études 🔊</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 40px;">
+    <a href="home.html" class="module-btn">Back to Home</a>
+  </div>
+</main>
+
+<script>
+  // Script UNIFIÉ pour TOUS les accordéons
+  const accordions = document.querySelectorAll('.accordion, .kw-accordion');
+  
+  accordions.forEach(acc => {
+    acc.onclick = function() {
+      // Toggle de la classe active
+      this.classList.toggle("active");
+      
+      const panel = this.nextElementSibling;
+      const icon = this.querySelector('span');
+
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+        icon.innerText = "+";
+      } else {
+        // On calcule la hauteur réelle du contenu
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        icon.innerText = "-";
+      }
+    };
+  });
+
+  function speakText(text) {
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "fr-FR";
+    utterance.rate = 0.85;
+    window.speechSynthesis.speak(utterance);
+  }
+</script>
+
+</body>
+</html>

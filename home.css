@@ -1,0 +1,224 @@
+/* ========== GLOBAL ========== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e5e7eb;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  background: rgba(2,6,23,0.85);
+  backdrop-filter: blur(10px);
+  padding: 18px 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.navbar h2 {
+  margin: 0;
+  color: #93c5fd;
+}
+
+/* ========== HERO ========== */
+.hero {
+  text-align: center;
+  padding: 90px 20px 70px;
+}
+
+.hero h1 {
+  font-size: 44px;
+  background: linear-gradient(90deg,#60a5fa,#a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  margin-top: 12px;
+  color: #94a3b8;
+}
+
+/* ========== TIMELINE ========== */
+.timeline {
+  width: 80%;
+  margin: 0 auto 120px;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(#2563eb, #7c3aed);
+}
+
+/* ========== MODULE WRAPPER ========== */
+.module {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 70px;
+  position: relative;
+  align-items: flex-start;
+}
+
+/* ========== MODULE NUMBER ========== */
+.module-number {
+  min-width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(124, 58, 237, 0.6);
+  font-size: 18px;
+}
+
+/* ========== MODULE CONTENT ========== */
+.module-content {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  padding: 30px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.module-content:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* ========== MODULE TEXT ========== */
+.module-text {
+  flex: 1;
+}
+
+.module-text h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #bfdbfe;
+  font-size: 22px;
+}
+
+.module-text p {
+  color: #cbd5f5;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  max-width: 90%;
+}
+
+/* ========== MODULE IMAGE ========== */
+.module-image {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.module-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  opacity: 0.9;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.module-content:hover .module-image img {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* ========== BUTTON ========== */
+.module-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.module-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.5);
+}
+
+
+/* ========== FOOTER ========== */
+.footer {
+  padding: 30px;
+  text-align: center;
+  background: rgba(2,6,23,0.9);
+  color: #94a3b8;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+
+.block {
+  width: 80%;
+  margin: 0 auto 120px;
+}
+
+.block-title {
+  font-size: 26px;
+  margin-bottom: 40px;
+  color: #e0e7ff;
+}
+
+/* Action Cards (Summary / Tests / Final) */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.action-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 35px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.action-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.action-card h3 {
+  margin-top: 0;
+  color: #bfdbfe;
+}
+
+.action-card p {
+  color: #cbd5f5;
+}
+
+.action-card.highlight {
+  border: 1px solid #7c3aed;
+  box-shadow: 0 0 25px rgba(124,58,237,0.4);
+}

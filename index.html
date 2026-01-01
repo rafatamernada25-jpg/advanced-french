@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced French – Home</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar">
+  <div class="nav-left">
+    <img src="assets/logo.jpeg" alt="Logo" class="logo">
+    <h2>Advanced French</h2>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<header class="hero">
+  <h1>Advanved French <br>in Digital Marketing</h1>
+  <p>Interactive Academic Learning Platform</p>
+</header>
+
+<!-- ========== SECTIONS MODULES ========== -->
+<section class="block">
+  <h2 class="block-title">📘 Course Modules</h2>
+
+  <div class="timeline">
+
+<div class="module">
+  <span class="module-number">01</span>
+
+  <div class="module-content">
+    <div class="module-text">
+      <h3>Strategic Lexicon & SEO</h3>
+      <p>Discover the key French terms used in digital marketing and online strategy.</p>
+      <a href="section12.html" class="module-btn">Open Module</a>
+    </div>
+
+    <div class="module-image">
+      <img src="assets/img14.jfif" alt="SEO French Illustration">
+    </div>
+  </div>
+</div>
+
+    <div class="module">
+      <span class="module-number">02</span>
+      <div class="module-content">
+        <div class="module-text">
+        <h3>Copywriting & Content Strategy</h3>
+        <p>Learn persuasive writing techniques and content creation tailored for the French-speaking market.</p>
+        <a href="section2.html" class="module-btn">Open Module</a>
+      </div>
+
+      <div class="module-image">
+      <img src="assets/img20.jpg" alt="Copywriting Illustration">
+      </div>
+    </div>
+  </div>
+
+    <div class="module">
+      <span class="module-number">03</span>
+      <div class="module-content">
+        <div class="module-text">
+        <h3>Social Media & E-Reputation</h3>
+        <p>Cultural nuances and community management strategies for French social platforms.</p>
+        <a href="section3.html" class="module-btn">Open Module</a>
+      </div>
+
+      <div class="module-image">
+      <img src="assets/img13.jpg" alt="Social Media Illustration">
+      </div>
+    </div>
+  </div>
+
+    <div class="module">
+      <span class="module-number">04</span>
+      <div class="module-content">
+        <div class="module-text">
+        <h3>Data Analytics & Reporting</h3>
+        <p>Learn to analyze data and present performance dashboards effectively in French.</p>
+        <a href="section4.html" class="module-btn">Open Module</a>
+      </div>
+
+      <div class="module-image">
+      <img src="assets/img17.png" alt="Analytics Illustration">
+      </div>
+    </div>
+  </div>
+
+    <div class="module">
+      <span class="module-number">05</span>
+      <div class="module-content">
+        <div class="module-text">
+        <h3>Business Pitching & Negotiation</h3>
+        <p>Advanced business French for client meetings, agency pitches, and professional networking</p>
+        <a href="section5.html" class="module-btn">Open Module</a>
+      </div>
+
+      <div class="module-image">
+      <img src="assets/img15.jpg" alt="Negotiation Illustration">
+      </div>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+<!-- ========== REVISION & PRACTICE ========== -->
+<section class="block">
+  <h2 class="block-title">🧠 Revision & Practice</h2>
+
+  <div class="action-grid">
+    <div class="action-card">
+      <h3>📄 Glossary of Terms</h3>
+      <p>A comprehensive review of key French marketing idioms and technical vocabulary.</p>
+      <a href="summary.html" class="module-btn">Open Glossary</a>
+    </div>
+
+    <div class="action-card">
+      <h3>🧪 Proficiency Hub</h3>
+      <p>Test your language skills with interactive MCQs and writing workshops.</p>
+      <a href="tests.html" class="module-btn">Go to Tests</a>
+    </div>
+  </div>
+</section>
+<div class="guide-container">
+  <div class="guide-header">
+    <span class="instruction-tag">Exercise: Practice your French</span>
+    <h2 style="color: #fff; margin: 0;">Complète ta présentation</h2>
+    <p style="color: #94a3b8; font-size: 15px; margin-top: 5px;">Fill in the blanks using the French vocabulary from the sections above.</p>
+  </div>
+
+  <div class="sentence-builder">
+    Bonjour ! Je m'appelle 
+    <input type="text" id="nameIn" class="drop-input" placeholder="Ton nom">. 
+    <br>
+    Je suis actuellement étudiant en 
+    <input type="text" id="yearIn" class="drop-input" placeholder="Année (L1, L2, L3)">. 
+    <br>
+    Dans ma formation, j'étudie le 
+    <input type="text" id="subjectIn" class="drop-input" placeholder="Matière principale">.
+    <br>
+    Je m'intéresse beaucoup au 
+    <input type="text" id="keywordIn" class="drop-input" placeholder="Terme digital">.
+    <br>
+    À la fin de l'année, j'aimerais trouver un 
+    <input type="text" id="goalIn" class="drop-input" placeholder="Stage / Alternance">.
+  </div>
+
+  <button class="preview-btn" onclick="showFinalIntro()">Display my full presentation</button>
+
+  <div id="previewBox" class="final-result">
+    <h4 style="color: #10b981; margin-bottom: 15px; font-size: 14px; text-transform: uppercase;">Bravo ! Voici ton texte :</h4>
+    <p id="resultText" style="color: #f1f5f9; font-size: 18px; line-height: 1.6; font-style: italic;"></p>
+    <p style="color: #64748b; font-size: 12px; margin-top: 20px;">💡 You can now copy this text for your professional profile!</p>
+  </div>
+</div>
+
+<script>
+function showFinalIntro() {
+  const name = document.getElementById('nameIn').value || "______";
+  const year = document.getElementById('yearIn').value || "______";
+  const subject = document.getElementById('subjectIn').value || "______";
+  const keyword = document.getElementById('keywordIn').value || "______";
+  const goal = document.getElementById('goalIn').value || "______";
+
+  const result = `Bonjour ! Je m'appelle ${name}. Je suis actuellement étudiant en ${year}. Dans ma formation, j'étudie le ${subject}. Je m'intéresse beaucoup au ${keyword}. À la fin de l'année, j'aimerais trouver un ${goal}.`;
+  
+  document.getElementById('resultText').innerText = result;
+  document.getElementById('previewBox').style.display = 'block';
+  
+
+  // Smooth scroll to result
+  document.getElementById('previewBox').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+</script>
+
+<style>
+  /* Container principal de l'exercice */
+.guide-container {
+  margin-top: 50px;
+  padding: 35px;
+  background: #0f172a; /* Fond sombre assorti au reste */
+  border-radius: 24px;
+  border: 2px solid #3b82f6; /* Bordure bleue pour différencier du challenge vert */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.guide-header {
+  margin-bottom: 25px;
+}
+
+.instruction-tag {
+  background: #3b82f6;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* Style de la phrase à trou */
+.sentence-builder {
+  background: rgba(59, 130, 246, 0.05);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  padding: 25px;
+  border-radius: 12px;
+  color: #f1f5f9;
+  font-size: 18px;
+  line-height: 2.2; /* Espace pour les inputs */
+  margin-bottom: 25px;
+}
+
+/* Style des champs de saisie (Inputs) */
+.drop-input {
+  background: #1e293b;
+  border: none;
+  border-bottom: 2px solid #334155;
+  color: #10b981; /* Texte écrit en vert pour ressortir */
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+  transition: 0.3s;
+  border-radius: 4px 4px 0 0;
+}
+
+.drop-input:focus {
+  border-bottom-color: #3b82f6;
+  background: #2d3e50;
+}
+
+.drop-input::placeholder {
+  color: #64748b;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* Bouton de prévisualisation */
+.preview-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.preview-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Boîte de résultat final */
+.final-result {
+  display: none; /* Caché par défaut */
+  margin-top: 25px;
+  padding: 20px;
+  background: #1e293b;
+  border-radius: 12px;
+  border-left: 5px solid #10b981;
+}
+  .advanced-challenge {
+    margin-top: 50px;
+    padding: 35px;
+    background: #0f172a;
+    border-radius: 24px;
+    border: 2px solid #10b981; /* Green border to show it's advanced */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  .challenge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  .level-badge {
+    background: #10b981;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .scenario-box {
+    background: rgba(16, 185, 129, 0.05);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    color: #cbd5e1;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .word-bank {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .word-tag {
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: #94a3b8;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+  }
+
+  .writing-area {
+    width: 100%;
+    height: 150px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    transition: 0.3s;
+  }
+
+  .writing-area:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.1);
+  }
+
+  .counter {
+    text-align: right;
+    color: #64748b;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  /* Alignement des boutons audio à côté des inputs */
+.input-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.mini-audio-btn {
+  background: #3b82f6;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.mini-audio-btn:hover {
+  transform: scale(1.1);
+  background: #10b981;
+}
+
+.word-tag {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.word-tag:hover {
+  background: #3b82f6;
+  color: white;
+}
+</style>
+
+<div class="advanced-challenge">
+  <div class="challenge-header">
+    <h2 style="color: #fff; margin: 0;">Challenge: Free Writing</h2>
+    <span class="level-badge">Advanced Level</span>
+  </div>
+
+  <div class="scenario-box">
+    <strong>The scenario :</strong><br>
+Imagine you are at a digital networking event. You meet a professional. Introduce yourself freely in French, explaining your background and what you are looking for.  </div>
+
+  <p style="color: #94a3b8; font-size: 14px; margin-bottom: 10px;">Suggested words(click to listen) :</p>
+  <div class="word-bank">
+    <span class="word-tag" onclick="parler('Actuellement')">Actuellement 🔊</span>
+    <span class="word-tag" onclick="parler('Compétences')">Compétences 🔊</span>
+    <span class="word-tag" onclick="parler('Parcours')">Parcours 🔊</span>
+    <span class="word-tag" onclick="parler('Opportunité')">Opportunité 🔊</span>
+  </div>
+
+  <textarea class="writing-area" id="advancedText" placeholder="Write your text here..."></textarea>
+  
+  <div style="margin-top: 20px; display: flex; gap: 15px;">
+    <button class="preview-btn" style="background: #10b981;" onclick="parler(document.getElementById('advancedText').value || 'Write first)">Listen to my text 🔊</button>
+    <button class="preview-btn" style="background: #1e293b; border: 1px solid #334155; width: auto;" onclick="clearText()">Delete</button>
+  </div>
+</div>
+
+  <textarea 
+    class="writing-area" 
+    id="advancedText" 
+    placeholder="Write your presentation here..."
+    oninput="updateCount()"
+  ></textarea>
+  
+  <div class="counter"><span id="charCount">0</span> caractères</div>
+
+  <div style="margin-top: 20px; display: flex; gap: 15px;">
+    <button class="preview-btn" style="background: #3b82f6;" onclick="saveText()">Save my work</button>
+    <button class="preview-btn" style="background: #1e293b; border: 1px solid #334155;" onclick="clearText()">Delete</button>
+  </div>
+</div>
+
+<script>
+function updateCount() {
+  const text = document.getElementById('advancedText').value;
+  document.getElementById('charCount').innerText = text.length;
+}
+
+function saveText() {
+  const text = document.getElementById('advancedText').value;
+  if(text.length > 10) {
+    alert("Bravo ! Ton texte a été enregistré localement.");
+  } else {
+    alert("Ton texte est un peu court, essaie d'écrire au moins une ou deux phrases !");
+  }
+}
+
+function clearText() {
+  if(confirm("Veux-tu vraiment effacer ton texte ?")) {
+    document.getElementById('advancedText').value = "";
+    updateCount();
+  }
+}
+</script>
+
+<!-- ========== FINAL ASSESSMENT ========== -->
+<section class="block">
+  <h2 class="block-title">🎓 Certification</h2>
+
+  <div class="action-grid">
+    <div class="action-card highlight">
+      <h3>Final Exam</h3>
+      <p>Submit a complete marketing case study and oral presentation in French.</p>
+      <a href="final.html" class="module-btn">Start Assessment</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  Academic Learning Material – in digital marketing 
+</footer>
+
+<script src="home.js"></script>
+<script>
+// Fonction universelle pour la synthèse vocale
+function parler(texte) {
+  if (!texte || texte.trim() === "") return;
+  window.speechSynthesis.cancel(); // Arrête la lecture en cours
+  const msg = new SpeechSynthesisUtterance(texte);
+  msg.lang = 'fr-FR';
+  msg.rate = 0.9; // Vitesse légèrement réduite pour bien comprendre
+  window.speechSynthesis.speak(msg);
+}
+
+function showFinalIntro() {
+  const name = document.getElementById('nameIn').value || "______";
+  const year = document.getElementById('yearIn').value || "______";
+  const subject = document.getElementById('subjectIn').value || "______";
+  const keyword = document.getElementById('keywordIn').value || "______";
+  const goal = document.getElementById('goalIn').value || "______";
+
+  const result = `Bonjour ! Je m'appelle ${name}. Je suis actuellement étudiant en ${year}. Dans ma formation, j'étudie le ${subject}. Je m'intéresse beaucoup au ${keyword}. À la fin de l'année, j'aimerais trouver un ${goal}.`;
+  
+  document.getElementById('resultText').innerText = result;
+  document.getElementById('previewBox').style.display = 'block';
+  
+  // Lecture automatique du résultat
+  parler(result);
+  
+  document.getElementById('previewBox').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+</script>
+</body>
+</html>
